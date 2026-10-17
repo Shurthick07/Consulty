@@ -1,0 +1,60 @@
+/* Basic Reset & Navbar Styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+.navbar > li {
+  display: inline-block;
+  position: relative; /* Key for positioning the dropdown */
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-family: sans-serif;
+  transition: background-color 0.3s;
+}
+
+/* Hover effects for main navbar links */
+.navbar a:hover {
+  background-color: #575757;
+}
+
+/* --- Dropdown Specific Styles --- */
+
+/* Hide the dropdown menu by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions the menu directly below the navbar link */
+  left: 0;
+  background-color: #444;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensures it sits on top of other content */
+}
+
+/* Style the links inside the dropdown */
+.dropdown-menu li {
+  display: block; /* Stacks the dropdown links vertically */
+}
+
+.dropdown-menu a {
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu a:hover {
+  background-color: #5f5e5e;
+}
+
+/* Show the dropdown menu when hovering over the parent list item */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
